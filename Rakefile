@@ -1,5 +1,5 @@
-directory "tmp"
- 
-  file "hello.tmp" => "tmp" do
-    sh "echo 'Hello' >> 'tmp/hello.tmp'"
-  end
+task :default => [:test]
+
+task :test do
+  ruby "test/unittest.rb"
+end
